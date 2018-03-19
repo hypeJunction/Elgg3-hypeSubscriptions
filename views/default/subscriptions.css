@@ -1,0 +1,64 @@
+.subscriptions-plan-selector input[type="radio"] {
+	display: none;
+}
+
+.subscriptions-plan-selector-label {
+	padding: 1rem;
+	box-shadow: 0 0 0 1px $(border-color-mild);
+	display: block;
+	margin-bottom: 0.5rem;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+
+.subscriptions-plan-selector-label h3 small {
+	font-size: 80%;
+	font-weight: bold;
+	margin-left: 1rem;
+	color: $(text-color-highlight);
+}
+
+.subscriptions-plan-selector-checkbox {
+	width: 1.5rem;
+	height: 1.5rem;
+	line-height: 1.2rem;
+	padding: 0;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid $(border-color-mild);
+	border-radius: 3px;
+	color: $(text-color-highlight);
+	background: #fff;
+}
+
+.subscriptions-plan-selector-label .elgg-image-block {
+	align-items: center;
+}
+
+.subscriptions-plan-selector-checkbox .elgg-icon {
+	display: none;
+}
+
+.subscriptions-plan-selector-label .elgg-output {
+	margin: 0;
+	display: none;
+}
+
+.subscriptions-plan-selector-input:checked + .subscriptions-plan-selector-label {
+	box-shadow: 0 0 0 1px $(border-color-highlight);
+	background: $(background-color-soft);
+
+	.subscriptions-plan-selector-checkbox .elgg-icon {
+		display: inline-block;
+	}
+
+	.elgg-output {
+		displan: block;
+	}
+}
+
+.subscriptions-subscribed-list > li {
+	padding: 0;
+	border: none;
+}
