@@ -151,6 +151,8 @@ class SubscriptionPlan extends Product {
 				return false;
 			}
 
+			elgg_trigger_event('create', 'subscription', $subscription);
+
 			return $subscription;
 		});
 	}
