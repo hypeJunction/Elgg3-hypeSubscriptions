@@ -62,7 +62,7 @@ return [
 	'subscriptions:setting:subscriptions.site_paywall:help' => 'If enabled, all users will be required to have an active subscription to navigate the site',
 
 	'subscriptions:setting:subscriptions.site_membership_plans' => 'Site plans',
-	'subscriptions:setting:subscriptions.site_membership_plans:help' => 'If paywall is enabled, users will need to have one of these plans to access the site',
+	'subscriptions:setting:subscriptions.site_membership_plans:help' => 'If paywall is enabled, users will need to have one of these plans to access the site. If you are using Registration Plan below, all of them must be included here (the reason for this is that you can have legacy plans as well as plans that you assign manually to allow site access, but you don\'t want them all appear on the registration form).',
 
 	'subscriptions:setting:subscriptions.payment_on_registration' => 'Payment on registration',
 	'subscriptions:setting:subscriptions.payment_on_registration:help' => 'If enabled, users will be required to pick a plan and provide payment details on registration',

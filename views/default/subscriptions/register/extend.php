@@ -4,7 +4,7 @@ if (!elgg_get_config('subscriptions.payment_on_registration')) {
 	return;
 }
 
-$plans = elgg_get_config('subscriptions.registration_membership_plans');
+$plans = (array) elgg_get_config('subscriptions.registration_membership_plans');
 if (empty($plans)) {
 	return;
 }

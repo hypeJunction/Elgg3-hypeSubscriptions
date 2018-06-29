@@ -4,6 +4,7 @@ namespace hypeJunction\Subscriptions;
 
 use Elgg\Database\QueryBuilder;
 use Elgg\Database\Repository;
+use Elgg\Di\ServiceFacade;
 use Elgg\TimeUsing;
 use Elgg\Values;
 use ElggUser;
@@ -13,6 +14,7 @@ use hypeJunction\Payments\GatewayInterface;
 class SubscriptionsService {
 
 	use TimeUsing;
+	use ServiceFacade;
 
 	/**
 	 * @var Config
@@ -31,6 +33,13 @@ class SubscriptionsService {
 	 */
 	public function __construct(Config $config) {
 		$this->config = $config;
+	}
+
+	/**
+	 * {@inheritdoc}
+	 */
+	public static function name() {
+		return 'subscriptions';
 	}
 
 	/**
@@ -203,7 +212,7 @@ class SubscriptionsService {
 	 * @throws \DataFormatException
 	 */
 	public function hasSubscription(ElggUser $user = null, $plans = null) {
-		$subscriptions = $this->getSubscriptions($user, ['count' => true]);
+		$subscriptions = $this->getSubscriptions($user, $plans, ['count' => true]);
 
 		return !empty($subscriptions);
 	}
