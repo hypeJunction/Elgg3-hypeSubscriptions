@@ -28,9 +28,9 @@ class SitePaywallMiddleware {
 
 		$user = elgg_get_logged_in_user_entity();
 		if (!$user) {
-			$exception = new SitePaywallException();
-			$exception->setRedirectUrl(elgg_get_registration_url());
-			throw $exception;
+			// Let walled garden control what resources are accessible
+			// when the user is logged out
+			return;
 		}
 
 		if ($user->isAdmin()) {
