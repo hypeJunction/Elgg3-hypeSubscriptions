@@ -4,6 +4,10 @@ namespace hypeJunction\Subscriptions;
 
 use Elgg\Hook;
 use Elgg\Request;
+use hypeJunction\Fields\Collection;
+use hypeJunction\Fields\HtmlField;
+use hypeJunction\Fields\MetaField;
+use hypeJunction\Fields\TitleField;
 use hypeJunction\Payments\Amount;
 
 class SubscriptionPlanFields {
@@ -12,99 +16,50 @@ class SubscriptionPlanFields {
 	 * Setup subscription plan form
 	 *
 	 * @param Hook $hook Hook
-	 * @return array
+	 * @return Collection
 	 */
 	public function __invoke(Hook $hook) {
 
-		$fields = [];
+		$fields = new Collection();
 
-		$fields['plan_id'] = [
-			'#type' => 'text',
-			'#section' => 'content',
-			'#setter' => function(\ElggEntity $entity, $value) {
-				/* @var $entity SubscriptionPlan */
-				$entity->setPlanId($value);
-			},
-			'#profile' => false,
-			'#visibility' => function(\ElggEntity $entity) {
-				return !$entity->plan_id;
-			},
+		$fields->add('plan_id', new PlanIdField([
+			'type' => 'text',
+			'section' => 'content',
+			'is_export_field' => true,
 			'required' => true,
-		];
+		]));
 
-		$fields['title'] = [
-			'#type' => 'text',
-			'#section' => 'content',
-			'#input' => function (Request $request) {
-				return elgg_get_title_input();
-			},
-			'#profile' => false,
+		$fields->add('title', new TitleField([
+			'type' => 'text',
+			'is_profile_field' => false,
 			'required' => true,
-		];
+			'is_export_field' => true,
+		]));
 
-		$config = elgg()->{'subscriptions.config'};
-		/* @var $config \hypeJunction\Subscriptions\Config */
-
-		$fields['pricing'] = [
-			'#type' => 'subscriptions/pricing',
+		$fields->add('pricing', new PricingField([
+			'type' => 'subscriptions/pricing',
 			'required' => true,
-			'#validate' => function($value, $params) {
-				$required = elgg_extract('required', $params);
-				if (!$required) {
-					return null;
-				}
+			'section' => 'content',
+			'is_export_field' => false,
+		]));
 
-				if (empty($value['cycle']) || empty($value['amount'] || empty($value['currency']))) {
-					return false;
-				}
-			},
-			'#setter' => function(\ElggEntity $entity, $value) use ($config) {
-				/* @var $entity \hypeJunction\Subscriptions\SubscriptionPlan */
+		$fields->add('trial_period_days', new MetaField([
+			'type' => 'number',
+			'section' => 'content',
+		]));
 
-				$cycle_name = elgg_extract('cycle', $value);
-
-				$entity->setCycle($cycle_name);
-
-				$price = elgg_extract('amount', $value, '0');
-				$currency = elgg_extract('currency', $value);
-
-				$amount = Amount::fromString($price, $currency);
-
-				$entity->setPrice($amount);
-			},
-			'#getter' => function(\ElggEntity $entity) use ($config) {
-				/* @var $entity \hypeJunction\Subscriptions\SubscriptionPlan */
-
-				$amount = $entity->getPrice();
-
-				return [
-					'cycle' => $entity->getCycle()->cycle,
-					'amount' => $amount->getConvertedAmount(),
-					'currency' => $amount->getCurrency(),
-				];
-			},
-			'#visibility' => function(\ElggEntity $entity) {
-				return !$entity->plan_id;
-			},
-			'#section' => 'content',
-		];
-
-		$fields['trial_period_days'] = [
-			'#type' => 'number',
-			'#section' => 'content',
-		];
-
-		$fields['description'] = [
-			'#type' => 'longtext',
+		$fields->add('description', new HtmlField([
+			'type' => 'longtext',
 			'rows' => 3,
-			'#section' => 'content',
-			'#profile' => false,
-		];
+			'section' => 'content',
+			'is_profile_field' => false,
+			'is_export_field' => true,
+		]));
 
-		$fields['access_id'] = [
-			'#type' => 'hidden',
+		$fields->add('access_id', new MetaField([
+			'type' => 'hidden',
 			'value' => ACCESS_PUBLIC,
-		];
+		]));
 
 		return $fields;
 	}

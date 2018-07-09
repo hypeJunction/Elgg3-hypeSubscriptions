@@ -14,7 +14,7 @@ return function () {
 
 	elgg_register_event_handler('init', 'system', function () {
 
-		elgg_extend_view('elgg.css', 'subscriptions.css');
+		elgg_extend_view('elements/components.css', 'subscriptions.css');
 		
 		elgg_register_plugin_hook_handler('fields', 'object:subscription_plan', \hypeJunction\Subscriptions\SubscriptionPlanFields::class);
 
