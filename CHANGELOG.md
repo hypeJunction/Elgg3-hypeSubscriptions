@@ -1,3 +1,13 @@
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/compare/1.1.1...1.1.2) (2018-07-09)
+
+
+### Bug Fixes
+
+* **forms:** use new fields API ([96c40b6](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/commit/96c40b6))
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/compare/1.1.0...1.1.1) (2018-06-30)
 
