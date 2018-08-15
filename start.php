@@ -46,6 +46,8 @@ return function () {
 		elgg_register_plugin_hook_handler('create', 'object', \hypeJunction\Subscriptions\NotifySubscriptionStart::class);
 		elgg_register_plugin_hook_handler('cancel', 'subscription', \hypeJunction\Subscriptions\NotifySubscriptionCancel::class);
 
+		elgg_register_plugin_hook_handler('cron', 'hourly', \hypeJunction\Subscriptions\ProcessExpiredSubscriptions::class);
+
 		elgg_register_plugin_hook_handler('register', 'user', \hypeJunction\Subscriptions\HandlePaymentOnRegistration::class, 100);
 
 		elgg_extend_view('register/extend', 'subscriptions/register/extend');

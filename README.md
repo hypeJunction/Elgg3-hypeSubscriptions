@@ -17,5 +17,9 @@ API for implementing paid subscriptions
  
  To implement custom logic when the subscription is created, listen to ``create, subscription`` event.
  
- To implement custom logic when the subscription cancelled, listing to ``cancel, subscription``. Note that the sbuscription can be cancelled at period end, so check ``current_period_end`` metadata, before terminating access to features.
+ To implement custom logic when the subscription cancelled, listing to ``cancel, subscription``. 
+ Note that the subscription can be cancelled at period end, so check ``current_period_end`` metadata, 
+ before terminating access to features. Use ``expire, subscription`` hook to do additional clean up 
+ for when subscription has expired after being cancelled with a future expiration.
+ 
  
