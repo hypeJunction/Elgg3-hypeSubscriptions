@@ -1,3 +1,13 @@
+<a name="1.1.3"></a>
+## [1.1.3](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/compare/1.1.2...1.1.3) (2018-08-15)
+
+
+### Bug Fixes
+
+* **subscriptions:** trigger an event when subscriptions actually expire ([ac044b4](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/commit/ac044b4))
+
+
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/compare/1.1.1...1.1.2) (2018-07-09)
 
