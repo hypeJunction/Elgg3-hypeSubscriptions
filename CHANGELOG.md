@@ -1,3 +1,13 @@
+<a name="1.1.4"></a>
+## [1.1.4](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/compare/1.1.3...1.1.4) (2018-08-15)
+
+
+### Bug Fixes
+
+* **events:** fix event registrations ([ce37376](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/commit/ce37376))
+
+
+
 <a name="1.1.3"></a>
 ## [1.1.3](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/compare/1.1.2...1.1.3) (2018-08-15)
 
