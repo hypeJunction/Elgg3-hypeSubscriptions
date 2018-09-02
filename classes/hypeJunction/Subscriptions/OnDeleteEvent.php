@@ -16,7 +16,7 @@ class OnDeleteEvent {
 
 		$object = $event->getObject();
 
-		if ($object instanceof Subscription) {
+		if ($object instanceof Subscription && !elgg_is_admin_logged_in()) {
 			return false;
 		}
 
