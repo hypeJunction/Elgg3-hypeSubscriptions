@@ -1,3 +1,13 @@
+<a name="1.1.5"></a>
+## [1.1.5](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/compare/1.1.4...1.1.5) (2018-09-02)
+
+
+### Bug Fixes
+
+* **perms:** allow admins to delete subscriptions ([0fd6615](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/commit/0fd6615))
+
+
+
 <a name="1.1.4"></a>
 ## [1.1.4](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/compare/1.1.3...1.1.4) (2018-08-15)
 
