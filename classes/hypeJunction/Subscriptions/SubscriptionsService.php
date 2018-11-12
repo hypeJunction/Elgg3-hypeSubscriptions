@@ -185,6 +185,10 @@ class SubscriptionsService {
 			'subtypes' => Subscription::SUBTYPE,
 			'limit' => 0,
 			'wheres' => function (QueryBuilder $qb) use ($user, $plans) {
+				if (!$user) {
+					return null;
+				}
+
 				$qb->joinMetadataTable('e', 'guid', 'current_period_end', 'inner', 'current_period_end');
 
 				return $qb->merge([
