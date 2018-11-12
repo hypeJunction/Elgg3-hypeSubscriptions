@@ -1,6 +1,6 @@
 {
 	"name": "hypejunction/hypesubscriptions",
-	"version": "1.1.5",
+	"version": "1.1.6",
 	"type": "elgg-plugin",
 	"description": "Subscriptions API",
 	"homepage": "http://hypejunction.com",

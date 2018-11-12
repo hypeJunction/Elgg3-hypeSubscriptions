@@ -1,3 +1,16 @@
+<a name="1.1.6"></a>
+## [1.1.6](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/compare/1.1.2...1.1.6) (2018-11-12)
+
+
+### Bug Fixes
+
+* **events:** fix event registrations ([ce37376](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/commit/ce37376))
+* **perms:** allow admins to delete subscriptions ([0fd6615](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/commit/0fd6615))
+* **query:** fallback if user is not set ([0c441d6](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/commit/0c441d6))
+* **subscriptions:** trigger an event when subscriptions actually expire ([ac044b4](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/commit/ac044b4))
+
+
+
 <a name="1.1.5"></a>
 ## [1.1.5](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/compare/1.1.4...1.1.5) (2018-09-02)
 
