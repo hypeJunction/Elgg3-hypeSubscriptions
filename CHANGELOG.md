@@ -1,3 +1,13 @@
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/compare/1.1.6...1.2.0) (2019-06-14)
+
+
+### Features
+
+* **plans:** add meta field to mark fields as internal use only ([1f4b828](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/commit/1f4b828))
+
+
+
 <a name="1.1.6"></a>
 ## [1.1.6](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/compare/1.1.2...1.1.6) (2018-11-12)
 
