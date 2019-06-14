@@ -36,6 +36,12 @@ class SubscriptionPlanFields {
 			'is_export_field' => true,
 		]));
 
+		$fields->add('internal_use', new MetaField([
+			'type' => 'checkbox',
+			'is_profile_field' => false,
+			'is_export_field' => true,
+		]));
+
 		$fields->add('pricing', new PricingField([
 			'type' => 'subscriptions/pricing',
 			'required' => true,

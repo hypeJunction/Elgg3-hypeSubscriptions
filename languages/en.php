@@ -117,4 +117,7 @@ return [
 		You can manage your subscriptions here:
 		%s
 	',
+
+	'field:object:subscription_plan:internal_use' => 'For internal use',
+	'field:object:subscription_plan:internal_use:help' => 'Plans marked for internal use will not appear in subscription forms. They can still be used for various internal purposes, e.g. subscribing someone to a plan manually',
 ];
