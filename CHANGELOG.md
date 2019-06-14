@@ -1,3 +1,13 @@
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/hypeJunction/Elgg3-hypeSubscriptions/compare/1.2.0...1.2.1) (2019-06-14)
+
+
+### Bug Fixes
+
+* **releases:** update github package location ([57d9e1b](https://github.com/hypeJunction/Elgg3-hypeSubscriptions/commit/57d9e1b))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/hypeJunctionPro/Elgg3-hypeSubscriptions/compare/1.1.6...1.2.0) (2019-06-14)
 

@@ -3,7 +3,7 @@
 
     <name>hypeSubscriptions</name>
     <id>hypeSubscriptions</id>
-    <version type="dist">1.2.0</version>
+    <version type="dist">1.2.1</version>
 
     <description>API for implementing paid subscriptions</description>
     <category>access</category>
