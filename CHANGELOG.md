@@ -1,3 +1,13 @@
+<a name="1.2.3"></a>
+## [1.2.3](https://github.com/hypeJunction/Elgg3-hypeSubscriptions/compare/1.2.2...1.2.3) (2019-06-14)
+
+
+### Bug Fixes
+
+* **css:** fix typo in CSS ([30bc0e5](https://github.com/hypeJunction/Elgg3-hypeSubscriptions/commit/30bc0e5))
+
+
+
 <a name="1.2.2"></a>
 ## [1.2.2](https://github.com/hypeJunction/Elgg3-hypeSubscriptions/compare/1.2.1...1.2.2) (2019-06-14)
 
