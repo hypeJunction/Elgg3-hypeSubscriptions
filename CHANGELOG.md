@@ -1,3 +1,13 @@
+<a name="1.2.2"></a>
+## [1.2.2](https://github.com/hypeJunction/Elgg3-hypeSubscriptions/compare/1.2.1...1.2.2) (2019-06-14)
+
+
+### Bug Fixes
+
+* **fields:** correctly setup internal_use checkbox ([422d84d](https://github.com/hypeJunction/Elgg3-hypeSubscriptions/commit/422d84d))
+
+
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/hypeJunction/Elgg3-hypeSubscriptions/compare/1.2.0...1.2.1) (2019-06-14)
 
