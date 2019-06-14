@@ -4,6 +4,7 @@ namespace hypeJunction\Subscriptions;
 
 use Elgg\Hook;
 use Elgg\Request;
+use hypeJunction\Fields\BooleanField;
 use hypeJunction\Fields\Collection;
 use hypeJunction\Fields\HtmlField;
 use hypeJunction\Fields\MetaField;
@@ -36,8 +37,9 @@ class SubscriptionPlanFields {
 			'is_export_field' => true,
 		]));
 
-		$fields->add('internal_use', new MetaField([
+		$fields->add('internal_use', new BooleanField([
 			'type' => 'checkbox',
+			'switch' => true,
 			'is_profile_field' => false,
 			'is_export_field' => true,
 		]));
